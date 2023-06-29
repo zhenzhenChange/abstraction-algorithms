@@ -1,14 +1,12 @@
 #![allow(unused)]
 
-use std::collections::HashMap;
-
 /// `T-O(N)`
 ///
 /// `S-O(N)`
 ///
 /// https://leetcode.cn/problems/two-sum/
 pub fn solution(nums: Vec<i32>, target: i32) -> Vec<i32> {
-    let mut map = HashMap::new();
+    let mut map = std::collections::HashMap::new();
 
     for (i, num) in nums.into_iter().enumerate() {
         let diff = target - num;
