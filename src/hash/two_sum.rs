@@ -30,7 +30,7 @@ mod tests {
         let mut ret = solution(vec![2, 7, 11, 15], 9);
         ret.sort();
 
-        assert_eq!(ret, vec![0, 1])
+        assert_eq!(ret, vec![0, 1]);
     }
 
     #[test]
@@ -38,7 +38,7 @@ mod tests {
         let mut ret = solution(vec![3, 2, 4], 6);
         ret.sort();
 
-        assert_eq!(ret, vec![1, 2])
+        assert_eq!(ret, vec![1, 2]);
     }
 
     #[test]
@@ -46,6 +46,6 @@ mod tests {
         let mut ret = solution(vec![3, 3], 6);
         ret.sort();
 
-        assert_eq!(ret, vec![0, 1])
+        assert_eq!(ret, vec![0, 1]);
     }
 }
