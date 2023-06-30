@@ -6,7 +6,7 @@
 ///
 /// https://leetcode.cn/problems/two-sum/
 pub fn solution(nums: Vec<i32>, target: i32) -> Vec<i32> {
-    let mut map = std::collections::HashMap::new();
+    let mut map = std::collections::HashMap::with_capacity(nums.len());
 
     for (i, num) in nums.into_iter().enumerate() {
         let diff = target - num;

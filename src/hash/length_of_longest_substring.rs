@@ -9,7 +9,7 @@ pub fn solution(s: String) -> i32 {
     let mut ret = 0;
     let mut slow = 0;
     let mut fast = 0;
-    let mut hashmap = std::collections::HashMap::new();
+    let mut hashmap = std::collections::HashMap::with_capacity(s.len());
 
     for c in s.chars() {
         if let Some(i) = hashmap.get(&c) {
