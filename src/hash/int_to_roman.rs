@@ -6,9 +6,7 @@
 ///
 /// https://leetcode.cn/problems/integer-to-roman/
 pub fn solution(num: i32) -> String {
-    let mut int = num;
-    let mut ret = String::new();
-    let mut map = vec![
+    let map = vec![
         ("M", 1000),
         ("CM", 900),
         ("D", 500),
@@ -24,6 +22,8 @@ pub fn solution(num: i32) -> String {
         ("I", 1),
     ];
 
+    let mut int = num;
+    let mut ret = String::new();
     let mut iter = map.into_iter();
 
     while let Some((k, v)) = iter.next() {
