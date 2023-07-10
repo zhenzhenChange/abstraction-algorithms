@@ -2,9 +2,9 @@
 
 /// 00003
 ///
-/// `T-O(N)`
+/// `T-O(N) = N => s.len`
 ///
-/// `S-O(|Σ|) => |Σ| => ASCII 128`
+/// `S-O(|Σ|) = |Σ| => ASCII 128`
 ///
 /// https://leetcode.cn/problems/longest-substring-without-repeating-characters/
 pub fn solution(s: String) -> i32 {

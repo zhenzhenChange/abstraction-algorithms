@@ -2,9 +2,9 @@
 
 /// 00001
 ///
-/// `T-O(N)`
+/// `T-O(N) = N => nums.len`
 ///
-/// `S-O(N)`
+/// `S-O(N) = N => nums.len`
 ///
 /// https://leetcode.cn/problems/two-sum/
 pub fn solution(nums: Vec<i32>, target: i32) -> Vec<i32> {
