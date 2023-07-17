@@ -24,12 +24,11 @@ pub fn solution(s: String) -> i32 {
     let bytes = s.as_bytes();
     let bytes_len = bytes.len();
 
+    let closure = |idx| bytes.get(idx).and_then(|c| map.get(&(*c as char)));
+
     while i < bytes_len {
-        let curr_num = map.get(&(*bytes.get(i).unwrap() as char)).unwrap();
-        let next_num = match bytes.get(i + 1) {
-            Some(c) => map.get(&(*c as char)).unwrap(),
-            None => &0,
-        };
+        let curr_num = closure(i).unwrap();
+        let next_num = closure(i + 1).unwrap_or(&0);
 
         // NOTE: 左边的值 >= 右边的值 --> 累加
         if curr_num >= next_num {

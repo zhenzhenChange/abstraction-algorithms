@@ -71,6 +71,7 @@ mod tests {
         assert_eq!(solution(preset_arg), false);
     }
 
+    #[test]
     fn case3() {
         let preset_arg = vec![
             vec!['.', '.', '.', '8', '.', '.', '.', '.', '.'],
