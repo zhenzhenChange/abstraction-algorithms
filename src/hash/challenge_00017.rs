@@ -1,8 +1,8 @@
 /// 00017
 ///
-/// `T-O(3^M * 4^N) = M => 234568 + N => 79`
+/// `T-O(3^M * 4^N)`
 ///
-/// `S-O(3^M * 4^N) = M => 234568 + N => 79`
+/// `S-O(3^M * 4^N)`
 ///
 /// https://leetcode.cn/problems/letter-combinations-of-a-phone-number/
 ///

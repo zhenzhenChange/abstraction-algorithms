@@ -1,8 +1,8 @@
 /// 00003
 ///
-/// `T-O(N) = N => s.len`
+/// `T-O(N)`
 ///
-/// `S-O(|Σ|) = |Σ| => ASCII 128`
+/// `S-O(|Σ|)`
 ///
 /// https://leetcode.cn/problems/longest-substring-without-repeating-characters/
 #[allow(unused)]

@@ -1,8 +1,8 @@
 /// 00001
 ///
-/// `T-O(N) = N => nums.len`
+/// `T-O(N)`
 ///
-/// `S-O(N) = N => nums.len`
+/// `S-O(N)`
 ///
 /// https://leetcode.cn/problems/two-sum/
 #[allow(unused)]

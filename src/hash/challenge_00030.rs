@@ -2,7 +2,7 @@
 ///
 /// `T-O(Timeout)`
 ///
-/// `S-O(N) => N => words.len`
+/// `S-O(N)`
 ///
 /// https://leetcode.cn/problems/substring-with-concatenation-of-all-words/
 ///
