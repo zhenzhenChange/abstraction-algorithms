@@ -19,7 +19,7 @@ pub fn solution(strs: Vec<String>) -> Vec<Vec<String>> {
         map.entry(sorted).or_insert_with(Vec::new).push(string);
     }
 
-    map.values().map(|v| v.clone()).collect()
+    map.into_values().collect()
 }
 
 #[cfg(test)]
