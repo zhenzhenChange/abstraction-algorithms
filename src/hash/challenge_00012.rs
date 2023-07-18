@@ -1,5 +1,3 @@
-#![allow(unused)]
-
 /// 00012
 ///
 /// `T-O(1)`
@@ -7,6 +5,7 @@
 /// `S-O(1)`
 ///
 /// https://leetcode.cn/problems/integer-to-roman/
+#[allow(unused)]
 pub fn solution(num: i32) -> String {
     let map = vec![
         ("M", 1000),

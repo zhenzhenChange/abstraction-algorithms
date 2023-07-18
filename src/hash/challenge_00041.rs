@@ -1,12 +1,11 @@
-#![allow(unused)]
-
 /// 00041
 ///
-/// `T-O(N)`
+/// `T-O(N) = N => nums.len`
 ///
 /// `S-O(1)`
 ///
 /// https://leetcode.cn/problems/first-missing-positive/
+#[allow(unused)]
 pub fn solution(mut nums: Vec<i32>) -> i32 {
     let len = nums.len();
 

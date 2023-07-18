@@ -1,5 +1,3 @@
-#![allow(unused)]
-
 /// 00030
 ///
 /// `T-O(Timeout)`
@@ -9,6 +7,7 @@
 /// https://leetcode.cn/problems/substring-with-concatenation-of-all-words/
 ///
 /// https://leetcode.cn/problems/substring-with-concatenation-of-all-words/solution/xiang-xi-tong-su-de-si-lu-fen-xi-duo-jie-fa-by-w-6/
+#[allow(unused)]
 pub fn solution(s: String, words: Vec<String>) -> Vec<i32> {
     let len = s.len();
     let size = words[0].len();
@@ -64,18 +63,12 @@ fn statistics(words: Vec<String>) -> std::collections::HashMap<String, i32> {
 #[cfg(test)]
 mod tests {
     use super::solution;
-
-    fn format(vec_str: Vec<&str>) -> Vec<String> {
-        vec_str
-            .into_iter()
-            .map(|str| String::from(str))
-            .collect::<Vec<String>>()
-    }
+    use crate::helpers::vec::as_string;
 
     #[test]
     fn case1() {
         let preset_arg0 = String::from("barfoothefoobarman");
-        let preset_arg1 = format(vec!["foo", "bar"]);
+        let preset_arg1 = as_string(vec!["foo", "bar"]);
 
         let mut preset_ret = vec![0, 9];
         let mut solution_ret = solution(preset_arg0, preset_arg1);
@@ -89,7 +82,7 @@ mod tests {
     #[test]
     fn case2() {
         let preset_arg0 = String::from("wordgoodgoodgoodbestword");
-        let preset_arg1 = format(vec!["word", "good", "best", "word"]);
+        let preset_arg1 = as_string(vec!["word", "good", "best", "word"]);
 
         let mut preset_ret: Vec<i32> = vec![];
         let mut solution_ret = solution(preset_arg0, preset_arg1);
@@ -103,7 +96,7 @@ mod tests {
     #[test]
     fn case3() {
         let preset_arg0 = String::from("barfoofoobarthefoobarman");
-        let preset_arg1 = format(vec!["bar", "foo", "the"]);
+        let preset_arg1 = as_string(vec!["bar", "foo", "the"]);
 
         let mut preset_ret = vec![6, 9, 12];
         let mut solution_ret = solution(preset_arg0, preset_arg1);
@@ -117,7 +110,7 @@ mod tests {
     #[test]
     fn case4() {
         let preset_arg0 = String::from("a");
-        let preset_arg1 = format(vec!["a", "a"]);
+        let preset_arg1 = as_string(vec!["a", "a"]);
 
         let mut preset_ret: Vec<i32> = vec![];
         let mut solution_ret = solution(preset_arg0, preset_arg1);

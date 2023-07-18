@@ -1,5 +1,3 @@
-#![allow(unused)]
-
 /// 00001
 ///
 /// `T-O(N) = N => nums.len`
@@ -7,6 +5,7 @@
 /// `S-O(N) = N => nums.len`
 ///
 /// https://leetcode.cn/problems/two-sum/
+#[allow(unused)]
 pub fn solution(nums: Vec<i32>, target: i32) -> Vec<i32> {
     let mut map = std::collections::HashMap::with_capacity(nums.len());
 

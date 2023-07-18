@@ -1,5 +1,3 @@
-#![allow(unused)]
-
 /// 00003
 ///
 /// `T-O(N) = N => s.len`
@@ -7,6 +5,7 @@
 /// `S-O(|Σ|) = |Σ| => ASCII 128`
 ///
 /// https://leetcode.cn/problems/longest-substring-without-repeating-characters/
+#[allow(unused)]
 pub fn solution(s: String) -> i32 {
     let mut ret = 0;
     let mut slow = 0;

@@ -1,5 +1,3 @@
-#![allow(unused)]
-
 /// 00036
 ///
 /// `T-O(1)`
@@ -7,6 +5,7 @@
 /// `S-O(1)`
 ///
 /// https://leetcode.cn/problems/valid-sudoku/
+#[allow(unused)]
 pub fn solution(board: Vec<Vec<char>>) -> bool {
     use std::collections::HashSet;
 

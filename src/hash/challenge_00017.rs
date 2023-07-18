@@ -1,5 +1,3 @@
-#![allow(unused)]
-
 /// 00017
 ///
 /// `T-O(3^M * 4^N) = M => 234568 + N => 79`
@@ -9,6 +7,7 @@
 /// https://leetcode.cn/problems/letter-combinations-of-a-phone-number/
 ///
 /// https://leetcode.cn/problems/letter-combinations-of-a-phone-number/solution/hui-su-dui-lie-tu-jie-by-ml-zimingmeng/
+#[allow(unused)]
 pub fn solution(digits: String) -> Vec<String> {
     if digits.is_empty() {
         return vec![];
@@ -45,18 +44,12 @@ pub fn solution(digits: String) -> Vec<String> {
 #[cfg(test)]
 mod tests {
     use super::solution;
-
-    fn format(vec_str: Vec<&str>) -> Vec<String> {
-        vec_str
-            .into_iter()
-            .map(|str| String::from(str))
-            .collect::<Vec<String>>()
-    }
+    use crate::helpers::vec::as_string;
 
     #[test]
     fn case1() {
         let mut ret = solution(String::from("23"));
-        let mut preset_ret = format(vec!["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"]);
+        let mut preset_ret = as_string(vec!["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"]);
 
         ret.sort();
         preset_ret.sort();
@@ -67,7 +60,7 @@ mod tests {
     #[test]
     fn case2() {
         let mut ret = solution(String::from(""));
-        let mut preset_ret = format(vec![]);
+        let mut preset_ret = as_string(vec![]);
 
         ret.sort();
         preset_ret.sort();
@@ -78,7 +71,7 @@ mod tests {
     #[test]
     fn case3() {
         let mut ret = solution(String::from("2"));
-        let mut preset_ret = format(vec!["a", "b", "c"]);
+        let mut preset_ret = as_string(vec!["a", "b", "c"]);
 
         ret.sort();
         preset_ret.sort();

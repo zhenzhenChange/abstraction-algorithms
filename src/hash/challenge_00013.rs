@@ -1,5 +1,3 @@
-#![allow(unused)]
-
 /// 00013
 ///
 /// `T-O(N) = N => s.len`
@@ -7,6 +5,7 @@
 /// `S-O(1)`
 ///
 /// https://leetcode.cn/problems/roman-to-integer/
+#[allow(unused)]
 pub fn solution(s: String) -> i32 {
     let map = std::collections::HashMap::from([
         ('M', 1000),
