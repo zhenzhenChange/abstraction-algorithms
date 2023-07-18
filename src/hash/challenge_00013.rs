@@ -23,7 +23,7 @@ pub fn solution(s: String) -> i32 {
     let bytes = s.as_bytes();
     let bytes_len = bytes.len();
 
-    let closure = |idx| bytes.get(idx).and_then(|c| map.get(&(*c as char)));
+    let closure = |idx| bytes.get(idx).and_then(|&c| map.get(&(c as char)));
 
     while i < bytes_len {
         let curr_num = closure(i).unwrap();
