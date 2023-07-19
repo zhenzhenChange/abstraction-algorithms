@@ -60,7 +60,7 @@ pub fn solution(s: String, t: String) -> String {
     }
 
     s.get(range_ret.0..=range_ret.0 + range_ret.1)
-        .map_or(String::new(), |sub_str| sub_str.to_string())
+        .map_or_else(String::new, |sub_str| sub_str.to_string())
 }
 
 #[cfg(test)]
