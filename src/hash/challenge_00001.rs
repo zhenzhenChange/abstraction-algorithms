@@ -9,7 +9,7 @@
 pub fn solution(nums: Vec<i32>, target: i32) -> Vec<i32> {
     let mut map = std::collections::HashMap::with_capacity(nums.len());
 
-    for (i, num) in nums.into_iter().enumerate() {
+    for (i, num) in nums.iter().enumerate() {
         let diff = target - num;
 
         if let Some(&cached) = map.get(&diff) {

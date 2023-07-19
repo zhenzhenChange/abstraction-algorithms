@@ -1,10 +1,10 @@
 use std::{cell::RefCell, rc::Rc};
 
-type SubTree = Option<Rc<RefCell<TreeNode>>>;
+type SubTree<T> = Option<Rc<RefCell<TreeNode<T>>>>;
 
-impl TreeNode {
+impl<T> TreeNode<T> {
     #[inline]
-    pub fn new(val: i32) -> Self {
+    pub fn new(val: T) -> Self {
         Self {
             val,
             left: None,
@@ -14,8 +14,8 @@ impl TreeNode {
 }
 
 #[derive(Debug, Eq, PartialEq)]
-pub struct TreeNode {
-    pub val: i32,
-    pub left: SubTree,
-    pub right: SubTree,
+pub struct TreeNode<T> {
+    pub val: T,
+    pub left: SubTree<T>,
+    pub right: SubTree<T>,
 }

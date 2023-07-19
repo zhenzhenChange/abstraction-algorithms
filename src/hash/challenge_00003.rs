@@ -13,10 +13,7 @@ pub fn solution(s: String) -> i32 {
     let mut hashmap = std::collections::HashMap::with_capacity(s.len());
 
     for c in s.chars() {
-        if let Some(i) = hashmap.get(&c) {
-            slow = std::cmp::max(slow, i + 1);
-        }
-
+        hashmap.get(&c).map(|i| slow = std::cmp::max(slow, i + 1));
         hashmap.insert(c, fast as i32);
         fast += 1;
 
